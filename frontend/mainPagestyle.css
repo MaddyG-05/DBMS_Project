@@ -79,3 +79,11 @@ nav ul li a:hover {
 #loginText:hover{
   background-color: orange;
 }
+
+footer{
+  background-color: #07377ede;
+  color: white;
+  text-align: center;
+  height: 5vh;
+  padding: 12px;
+}

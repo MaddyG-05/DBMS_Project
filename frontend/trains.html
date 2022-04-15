@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>trains</title>
     <link rel="stylesheet" href="mainPagestyle.css">
     <link rel="stylesheet" href="form.css">
 </head>
@@ -26,5 +26,72 @@
             <img src="Images/IRCTC-Logo.png" id="logo2">
         </nav>
     </header>
+
+    <form action="/login" method="POST" style="border:1px solid #ccc">
+        <div class="formContainer">
+            <h1 style="font-size:300%;">BOOK TRAIN TICKETS</h1>
+            <p>You can book train tickets here</p>
+            <br>
+
+            <label for="from"><b><br>Source Station</b></label>
+            <select name="from" id="sourceStation"> 
+                <option value="0">Select the Source Station</option>
+                <option value="1">A</option>
+                <option value="2">B</option>
+                <option value="3">C</option>
+                <option value="4">D</option>
+                <option value="5">E</option>
+                <option value="6">F</option>
+                <option value="7">G</option>
+                <option value="8">H</option>
+                <option value="9">I</option>
+                <option value="10">J</option>
+                <option value="11">K</option>
+                <option value="12">L</option>
+                <option value="13">M</option>
+            </select>
+            <br>
+            <label for="from"><b><br>Destination Station</b></label>
+            <select name="from" id="sourceStation">
+                <option value="0">Select the Destination Station</option>
+                <option value="1">A</option>
+                <option value="2">B</option>
+                <option value="3">C</option>
+                <option value="4">D</option>
+                <option value="5">E</option>
+                <option value="6">F</option>
+                <option value="7">G</option>
+                <option value="8">H</option>
+                <option value="9">I</option>
+                <option value="10">J</option>
+                <option value="11">K</option>
+                <option value="12">L</option>
+                <option value="13">M</option>
+            </select>
+            <br>
+            <label for="dateTravel"><b><br>Date Of Travelling</b></label>
+            <input type="date" placeholder="Enter Date" name="dateTravel" required>
+
+            <br>
+            <label for="class"><b><br>Choose Class</b></label>
+            <select name="class" id="class">
+                <option value="0">Select the class</option>
+                <option value="1">AC1</option>
+                <option value="2">AC2</option>
+                <option value="3">AC3</option>
+                <option value="4">Unreserved</option>
+            </select>
+
+            <div class="clearfix">
+                <!-- <button type="button" class="cancelbtn">Cancel</button> -->
+                <button type="submit" class="signupbtn">Login</button>
+            </div>
+        </div>
+    </form>
+    <br><br>
+  <footer>
+      <p> "Copyright © 2017, Centre For Railway Information Systems, Designed and Hosted by SMS(S) Group 5 "  </p>
+  </footer>
+
 </body>
 </html>
