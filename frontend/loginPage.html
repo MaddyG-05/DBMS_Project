@@ -13,14 +13,15 @@
         <nav id="navbar">
             <img src="Images/Indian_Railways_logo.png" id="logo">
             <ul>
-                <li>Register</li>
-                <li>Agent Login</li>
-                <li>Contact Us</li>
+                <li><a href="mainPage.html">Home</a></li>
+                <li><a href="register.html">Register</a></li>
+                <li><a href="agentLogin.html">Agent Login</a></li>
+                <li><a href="contactUs.html">Contact Us</a></li>
                 <li>Trains</li>
                 <li>Buses</li>
                 <li>Flights</li>
                 <li>Payments</li>
-                <li>Ticket Details</li>
+                <li><a href="ticketDetails.html">Ticket Details</a></li>
             </ul>
             <img src="Images/IRCTC-Logo.png" id="logo2">
         </nav>
@@ -37,18 +38,12 @@
             <label for="psw"><b><br>Password</b></label>
             <input type="password" placeholder="Enter Password" name="psw" required>
 
-            <!-- <label for="psw-repeat"><b>Repeat Password</b></label>
-          <input type="password" placeholder="Repeat Password" name="psw-repeat" required> -->
-
-            <label>
-                <br><input type="checkbox" checked="checked" name="remember" style="margin-bottom:15px"> Remember me
-            </label>
 
             <!-- <p>By creating an account you agree to our <a href="#" style="color:dodgerblue">Terms & Privacy</a>.</p> -->
 
             <div class="clearfix">
                 <!-- <button type="button" class="cancelbtn">Cancel</button> -->
-                <button type="submit" class="signupbtn"><a href="dashboard.html">Login</a></button>
+                <button type="submit" class="signupbtn" onclick="dashboard.html">Login</button>
             </div>
         </div>
     </form>

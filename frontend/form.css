@@ -1,6 +1,7 @@
 .formContainer {
     text-align: center;
     color: #07377ede;
+    border-radius: 5%;
   }
   
   input[type=text],
@@ -39,4 +40,9 @@
   
   button:hover {
     opacity: 1;
+    color: white;
+  }
+
+  .signupbtn:hover{
+    color: white;
   }
