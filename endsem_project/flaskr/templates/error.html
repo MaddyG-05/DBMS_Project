@@ -4,6 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Error Page</title>
+    <link rel="stylesheet" href="../static/mainPagestyle.css">
+    <link rel="stylesheet" href="../static/form.css">
     
 </head>
 
@@ -11,15 +14,26 @@
     <header>
         <nav id="navbar">
             <img src="../static/Images/Indian_Railways_logo.png" id="logo">
-            <a href="/">SOMETHING WENT WRONG. BACK TO MAIN MENU</a>
+            <ul>
+                <!-- <li> <a href="login.html">Login</a></li> -->
+                  <!-- NEED TO CHECK HERE IF ALREADY LOGGED IN OR NOT -->
+                <li><a href="/register">Register</a></li>
+                <li><a href="/agentLogin">Agent Login</a></li>
+                <li><a href="/contactUs">Contact Us</a></li>
+                <li><a href="/trains">Trains</a></li>
+                <li><a href="/buses">Buses</a></li>
+                <li><a href="/flights">Flights</a></li>
+                <li><a href="/payments">Payments</a></li>
+                <li><a href="/ticketDetails">Ticket Details</a></li>
+            </ul>
             <img src="../static/Images/IRCTC-Logo.png" id="logo2">
         </nav>
     </header>
 
-    <img src="..\\static\\Images\\trainImg.jpg" id="bg-image">
-    <div class="bg-text">
-        <h1>INDIAN RAILWAYS</h1>
-        <p>Safety | Security | Punctuality</p>
+    <img src="..\\static\\Images\\error.png" id="error-img">
+
+    <div class="formContainer" id = "errormsg">
+        <a href="/">SOMETHING WENT WRONG. BACK TO MAIN MENU</a>
     </div>
 
     

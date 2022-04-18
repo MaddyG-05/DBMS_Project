@@ -127,3 +127,28 @@ footer{
   padding: 20px;
   text-align: right;
 }
+
+#errormsg{
+  position: absolute;
+  left: 500px;
+  bottom: 200px;
+  border: 15px solid white;
+  background: rgb(255, 255, 255);
+  width: 25%;
+}
+
+#error-img{
+  width: 75%;
+  height: 75%;
+  position: absolute;
+  left: 150px;
+}
+
+#success{
+  position: absolute;
+  left: 500px;
+  bottom: 100px;
+  border: 15px solid white;
+  background: rgb(255, 255, 255);
+  width: 25%;
+}
