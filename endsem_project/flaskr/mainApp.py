@@ -138,7 +138,7 @@ def train1():
     result=cursor.fetchall()
     print(result)
     cursor.close()
-    return 'train1'
+    return render_template("train1.html",value=result)
 
 @app.route('/train2')
 def train2():

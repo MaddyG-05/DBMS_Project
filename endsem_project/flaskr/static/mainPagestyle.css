@@ -152,3 +152,18 @@ footer{
   background: rgb(255, 255, 255);
   width: 25%;
 }
+
+#cross{
+  width: 50%;
+  height: 70%;
+  position: absolute;
+}
+
+#err-msg{
+  position: absolute;
+  right: 200px;
+  bottom: 250px;
+  border: 15px solid white;
+  background: rgb(255, 255, 255);
+  width: 25%;
+}

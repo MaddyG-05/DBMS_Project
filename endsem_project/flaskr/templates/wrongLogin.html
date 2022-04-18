@@ -3,6 +3,10 @@
 
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Wrong login</title>
+    <link rel="stylesheet" href="../static/mainPagestyle.css">
+    <link rel="stylesheet" href="../static/form.css">
     
     
 </head>
@@ -11,15 +15,25 @@
     <header>
         <nav id="navbar">
             <img src="../static/Images/Indian_Railways_logo.png" id="logo">
-            <a href="/">USER ID OR PASSWORD IS INCORRECT. HEAD TO MAIN MENU TO TRY AGAIN</a>
+            <ul>
+                <!-- <li> <a href="login.html">Login</a></li> -->
+                  <!-- NEED TO CHECK HERE IF ALREADY LOGGED IN OR NOT -->
+                <li><a href="/register">Register</a></li>
+                <li><a href="/agentLogin">Agent Login</a></li>
+                <li><a href="/contactUs">Contact Us</a></li>
+                <li><a href="/trains">Trains</a></li>
+                <li><a href="/buses">Buses</a></li>
+                <li><a href="/flights">Flights</a></li>
+                <li><a href="/payments">Payments</a></li>
+                <li><a href="/ticketDetails">Ticket Details</a></li>
+            </ul>
             <img src="../static/Images/IRCTC-Logo.png" id="logo2">
         </nav>
     </header>
 
-    <img src="..\\static\\Images\\trainImg.jpg" id="bg-image">
-    <div class="bg-text">
-        <h1>INDIAN RAILWAYS</h1>
-        <p>Safety | Security | Punctuality</p>
+    <img src="..\\static\\Images\\cross.jpg" id = "cross">
+    <div class="formContainer" id = "err-msg">
+        <a href="/">USER ID OR PASSWORD IS INCORRECT. HEAD TO MAIN MENU TO TRY AGAIN</a>
     </div>
 
     
