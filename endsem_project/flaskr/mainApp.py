@@ -1,3 +1,4 @@
+from click import style
 from flask import Flask,render_template, request
 from flask_mysqldb import MySQL
 
@@ -5,8 +6,8 @@ from flask_mysqldb import MySQL
 app = Flask(__name__)
  
 app.config['MYSQL_HOST'] = 'localhost'
-app.config['MYSQL_USER'] = 'root'
-app.config['MYSQL_PASSWORD'] = 'abcd'
+app.config['MYSQL_USER'] = 'newuser'
+app.config['MYSQL_PASSWORD'] = 'Srijan123'
 app.config['MYSQL_DB'] = 'endsem_evaluation'
 
 mysql = MySQL(app)
@@ -17,6 +18,7 @@ t_src_id=None
 t_dest_id=None
 t_train_id=None
 t_class_type=None
+t_date=None
 
 b_src_id=None
 b_dest_id=None
@@ -121,24 +123,35 @@ def trains():
 
 @app.route('/train1', methods=['POST', 'GET'])
 def train1():
-    global t_src_id, t_dest_id
+    global t_src_id, t_dest_id, t_date, t_class_type, t_train_id
     if(request.method=='GET'):
+        t_src_id=None
+        t_dest_id=None
+        t_train_id=None
+        t_class_type=None
+        t_date=None
         return render_template('error.html')
-    print(request.form)
+    # print(request.form)
     t_src_id=request.form['from']
     t_dest_id=request.form['to']
+    t_date=request.form['dateTravel']
+    t_class_type=request.form['class']
     query="""
-    select Train.train_id, Train.train_type
-	from Train, Train_stops t1, Train_stops t2
-	where t1.train_id=Train.train_id 
-	and t1.train_id=t2.train_id and t1.station_id='{0}' and t2.station_id='{1}'
-	and((t2.arrival_day>t1.arrival_day) OR (t2.arrival_hour>t1.arrival_hour));""".format(t_src_id, t_dest_id)
+    select t.train_id, t.train_type, ts1.departure_hour, ts1.departure_minute, ts2.arrival_hour, ts2.arrival_minute, (t.price_per_km*tdf.distance*tc.price_multiplier)
+    from Train t, train_classes tc, Train_distance_from tdf, Train_stops ts1, Train_stops ts2
+    where t.train_id=tc.train_id AND tc.class_type='{0}' AND count_of2(tc.train_id, tc.class_type, '{1}')<tc.count_of_seats AND tdf.source_id='{2}' AND tdf.destination_id='{3}' AND ts1.train_id=t.train_id AND ts2.train_id=t.train_id AND ts1.station_id='{2}' AND ts2.station_id='{3}';""".format(t_class_type, t_date, t_src_id, t_dest_id)
     cursor=mysql.connection.cursor()
     cursor.execute(query, ())
-    result=cursor.fetchall()
+    queryresult=cursor.fetchall()
+    result=[]
+    for i in queryresult:
+        temp=(i[0], i[1], str(i[2])+':'+str(i[3]), str(i[4])+':'+str(i[5]), i[6])
+        result.append(temp)
     print(result)
     cursor.close()
     return render_template("train1.html",value=result)
+    
+    return "whatever"
 
 @app.route('/train2')
 def train2():
