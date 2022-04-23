@@ -138,10 +138,10 @@ footer{
 }
 
 #error-img{
-  width: 75%;
-  height: 75%;
+  width: 60%;
+  height: 60%;
   position: absolute;
-  left: 150px;
+  left: 275px;
 }
 
 #success{
@@ -154,9 +154,11 @@ footer{
 }
 
 #cross{
-  width: 50%;
-  height: 70%;
+  width: 35%;
+  height: 65%;
   position: absolute;
+  left: 100px;
+  top: 120px;
 }
 
 #err-msg{
