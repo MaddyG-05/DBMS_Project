@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Schedule</title>
+    <title>Train Cancel</title>
     <link rel="stylesheet" href="../static/mainPagestyle.css">
     <link rel="stylesheet" href="../static/form.css">
     <link rel="stylesheet" href="../static/tableStyle.css">
@@ -26,13 +26,31 @@
     </header>
     <br><br><br>
 
-    <form action="/Schedule" method ="POST" style="border:1px solid #ccc">
+    <form action="/trainC" method = "POST" style="border:1px solid #ccc">
         <div class="formContainer">
-            <h1 style="font-size:150%;">Choose one of the below</h1>
-            
-            <div class="one"><a href=/trainS><img src="../static/images/train.png" ></a></div>
-            <div class="two"><a href=/busesS><img src="../static/images/bus.png" ></a></div>
-            <div class="three"><a href=/flightS><img src="../static/images/flight.png" ></a></div>
+            <h1 style="font-size: 250%;">Train Cancel</h1>
+
+            <label for="dot"><b><br>Cancel Date</b></label>
+            <input type="date" placeholder="Enter DOT" name="dot" required>
+            <br>
+            <label for="from"><b><br>Train ID</b></label>
+            <select name="from" id="TrainID" required> 
+                <option value="101">A</option>
+                <option value="102">B</option>
+                <option value="103">C</option>
+                <option value="104">D</option>
+                <option value="105">E</option>
+                <option value="106">F</option>
+                <option value="107">G</option>
+                <option value="108">H</option>
+                <option value="109">I</option>
+                <option value="110">J</option>
+                <option value="111">K</option>
+                <option value="112">L</option>
+                <option value="113">M</option>
+            </select>
+            <br><br>
+            <button type="submit" class="signupbtn" ><b>Login</b></button>
         </div>
     </form>
     

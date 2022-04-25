@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Schedule</title>
+    <title>bus booking</title>
     <link rel="stylesheet" href="../static/mainPagestyle.css">
     <link rel="stylesheet" href="../static/form.css">
     <link rel="stylesheet" href="../static/tableStyle.css">
@@ -16,7 +16,7 @@
             <ul>
                 <!-- <li> <a href="login.html">Login</a></li> -->
                   <!-- NEED TO CHECK HERE IF ALREADY LOGGED IN OR NOT -->
-                <li><a href="/Schedule">Schedule</a></li>
+                <li><a href="Schedule">Schedules</a></li>
                 <li><a href="/Bookings">Bookings</a></li>
                 <li><a href="/Cancellation">Cancellation</a></li>
 
@@ -25,17 +25,28 @@
         </nav>
     </header>
     <br><br><br>
-
-    <form action="/Schedule" method ="POST" style="border:1px solid #ccc">
-        <div class="formContainer">
-            <h1 style="font-size:150%;">Choose one of the below</h1>
-            
-            <div class="one"><a href=/trainS><img src="../static/images/train.png" ></a></div>
-            <div class="two"><a href=/busesS><img src="../static/images/bus.png" ></a></div>
-            <div class="three"><a href=/flightS><img src="../static/images/flight.png" ></a></div>
-        </div>
-    </form>
-    
+    <table>
+        <caption id = "heading2"><b>BUS BOOKED</b></caption>
+    <thead>
+        <tr>
+            <th>Ticket ID</th>
+            <th>User ID</th>
+            <th>Departure Station</th>
+            <th>Arrival Station</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for row in value %}
+        <tr>
+            <td>{{row[0]}}</th>
+            <td>{{row[1]}}</td>
+            <td>{{row[2]}}</th>
+            <td>{{row[3]}}</td>
+        </tr>
+        {% endfor %}
+    </tbody>
+    </table>
+    <br><br>
   <footer>
       <p> "Copyright © 2022, Centre For Railway Information Systems, Designed and Hosted by SMS(S) Group 5 "  </p>
   </footer>

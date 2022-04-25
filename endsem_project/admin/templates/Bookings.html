@@ -18,25 +18,20 @@
                   <!-- NEED TO CHECK HERE IF ALREADY LOGGED IN OR NOT -->
                 <li><a href="/Schedule">Schedule</a></li>
                 <li><a href="/Bookings">Bookings</a></li>
-                <li><a href="/Prices">Prices</a></li>
+                <li><a href="/Cancellation">Cancellation</a></li>
             </ul>
             <img src="../static/Images/IRCTC-Logo.png" id="logo2">
         </nav>
     </header>
     <br><br><br>
 
-    <form action="/trainSchedule" method="POST" style="border:1px solid #ccc">
+    <form action="/Bookings" method ="POST" style="border:1px solid #ccc">
         <div class="formContainer">
-            <h1 style="font-size:250%;">Booking</h1>
-            <br>
-
-            <label for="dot"><b><br>Date Of Travelling</b></label>
-            <input type="date" placeholder="Enter DOT" name="dot" required>
-            <br>
+            <h1 style="font-size:150%;">Choose one of the below</h1>
             
-            <div class="one"><a href=/trainBooking><img src="../static/images/train.png" ></a></div>
-            <div class="two"><a href=/BusBooking><img src="../static/images/bus.png" ></a></div>
-            <div class="three"><a href=/flightBooking><img src="../static/images/flight.png" ></a></div>
+            <div class="one"><a href=/trainB><img src="../static/images/train.png" ></a></div>
+            <div class="two"><a href=/busB><img src="../static/images/bus.png" ></a></div>
+            <div class="three"><a href=/flightB><img src="../static/images/flight.png" ></a></div>
         </div>
     </form>
     

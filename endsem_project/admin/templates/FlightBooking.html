@@ -4,9 +4,10 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Flight Booking</title>
+    <title>flight booking</title>
     <link rel="stylesheet" href="../static/mainPagestyle.css">
     <link rel="stylesheet" href="../static/form.css">
+    <link rel="stylesheet" href="../static/tableStyle.css">
 </head>
 <body>
     <header>
@@ -15,51 +16,36 @@
             <ul>
                 <!-- <li> <a href="login.html">Login</a></li> -->
                   <!-- NEED TO CHECK HERE IF ALREADY LOGGED IN OR NOT -->
-                <li><a href="/trainSchedule">Trains Schedule</a></li>
-                <li><a href="/busesSchedule">Buses Schedule</a></li>
-                <li><a href="/flightsSchedule">Flights Schedule</a></li>
+                <li><a href="Schedule">Schedules</a></li>
                 <li><a href="/Bookings">Bookings</a></li>
-                <li><a href="/Prices">Prices</a></li>
+                <li><a href="/Cancellation">Cancellation</a></li>
+
             </ul>
             <img src="../static/Images/IRCTC-Logo.png" id="logo2">
         </nav>
     </header>
     <br><br><br>
-
-    <form action="/train1" method="POST" style="border:1px solid #ccc">
-        <div class="formContainer">
-            <h1 style="font-size:250%;">Flight Booking Details</h1>
-            <br>
-
-            <label for="dot"><b><br>Date Of Travelling</b></label>
-            <input type="date" placeholder="Enter DOT" name="dot" required>
-            <br>
-
-            <label for="from"><b><br>Flight ID</b></label>
-            <select name="from" id="sourceStation"> 
-                <option value="100">Select the Bus ID</option>
-                <option value="101">A</option>
-                <option value="102">B</option>
-                <option value="103">C</option>
-                <option value="104">D</option>
-                <option value="105">E</option>
-                <option value="106">F</option>
-                <option value="107">G</option>
-                <option value="108">H</option>
-                <option value="109">I</option>
-                <option value="110">J</option>
-                <option value="111">K</option>
-                <option value="112">L</option>
-                <option value="113">M</option>
-            </select>
-            <br><br>
-            
-            <div class="clearfix">
-                <!-- <button type="button" class="cancelbtn">Cancel</button> -->
-                <button type="submit" class="signupbtn">Enter</button>
-            </div>
-        </div>
-    </form>
+    <table>
+        <caption id = "heading2"><b>FLIGHT BOOKED</b></caption>
+    <thead>
+        <tr>
+            <th>Ticket ID</th>
+            <th>User ID</th>
+            <th>Departure Airport</th>
+            <th>Arrival Airport</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for row in value %}
+        <tr>
+            <td>{{row[0]}}</th>
+            <td>{{row[1]}}</td>
+            <td>{{row[2]}}</th>
+            <td>{{row[3]}}</td>
+        </tr>
+        {% endfor %}
+    </tbody>
+    </table>
     <br><br>
   <footer>
       <p> "Copyright © 2022, Centre For Railway Information Systems, Designed and Hosted by SMS(S) Group 5 "  </p>

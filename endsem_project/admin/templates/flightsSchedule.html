@@ -16,11 +16,10 @@
             <ul>
                 <!-- <li> <a href="login.html">Login</a></li> -->
                   <!-- NEED TO CHECK HERE IF ALREADY LOGGED IN OR NOT -->
-                <li><a href="/trainSchedule">Trains Schedule</a></li>
-                <li><a href="/busesSchedule">Buses Schedule</a></li>
-                <li><a href="/flightsSchedule">Flights Schedule</a></li>
+                <li><a href="/Schedule">Schedule</a></li>
                 <li><a href="/Bookings">Bookings</a></li>
-                <li><a href="/Prices">Prices</a></li>
+                <li><a href="/Cancellation">Cancellation</a></li>
+
             </ul>
             <img src="../static/Images/IRCTC-Logo.png" id="logo2">
         </nav>
@@ -41,6 +40,8 @@
         <tr>
             <td>{{row[0]}}</th>
             <td>{{row[1]}}</td>
+            <td>{{row[2]}}</th>
+            <td>{{row[3]}}</td>
         </tr>
         {% endfor %}
     </tbody>
