@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ticket details</title>
+    <link rel="stylesheet" href="../static/mainPagestyle.css">
+    <link rel="stylesheet" href="../static/form.css">
+</head>
+<body>
+    <header>
+        <nav id="navbar">
+            <img src="../static/Images/Indian_Railways_logo.png" id="logo">
+            <ul>
+                <!-- <li> <a href="login.html">Login</a></li> -->
+                  <!-- NEED TO CHECK HERE IF ALREADY LOGGED IN OR NOT -->
+                <!-- <li><a href="mainPage.html">Home</a></li>
+                <li><a href="contactUs.html">Contact Us</a></li>
+                <li><a href="trains.html">Trains</a></li>
+                <li><a href="buses.html">Buses</a></li>
+                <li><a href="flights.html">Flights</a></li>
+                <li><a href="payments.html">Payments</a></li> -->
+                
+            </ul>
+            <img src="../static/Images/IRCTC-Logo.png" id="logo2">
+        </nav>
+    </header>
+
+    <form action="/trainTicketDetails1" method="POST" style="border:1px solid #ccc">
+        <div class="formContainer">
+            <h1 style="font-size:300%;">TICKET DETAILS</h1>
+            <p>Please fill in your details</p>
+            <hr>
+
+            <label for="id"><b><br>Ticket ID</b></label>
+            <input type="number" placeholder="Enter Ticket ID " name="ticketID" required>
+
+            <!-- <label for="userid"><b><br>User ID</b></label>
+            <input type="text" placeholder="Enter User ID " name="userID" required> -->
+
+            <div class="clearfix">
+                <!-- <button type="button" class="cancelbtn">Cancel</button> -->
+                <button type="submit" class="signupbtn">Sign In</button>
+            </div>
+        </div>
+    </form>
+
+    <br><br>
+  <footer>
+      <p> "Copyright © 2022, Centre For Railway Information Systems, Designed and Hosted by SMS(S) Group 5 "  </p>
+  </footer>
+    
+</body>
+</html>

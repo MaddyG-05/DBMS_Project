@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flights</title>
+    <link rel="stylesheet" href="../static/mainPagestyle.css">
+    <link rel="stylesheet" href="../static/form.css">
+</head>
+<body>
+    <header>
+        <nav id="navbar">
+            <img src="../static/Images/Indian_Railways_logo.png" id="logo">
+            <ul>
+                <!-- <li> <a href="login.html">Login</a></li> -->
+                  <!-- NEED TO CHECK HERE IF ALREADY LOGGED IN OR NOT -->
+                <li><a href="mainPage">Home</a></li>
+                <li><a href="contactUs">Contact Us</a></li>
+                <li><a href="trains">Trains</a></li>
+                <li><a href="buses">Buses</a></li>
+                <li><a href="flights">Flights</a></li>
+                <li><a href="payments">Payments</a></li>
+                <li><a href="ticketDetails">Ticket Details</a></li>
+            </ul>
+            <img src="../static/Images/IRCTC-Logo.png" id="logo2">
+        </nav>
+    </header>
+
+    <form action="/flight1" method="POST" style="border:1px solid #ccc">
+        <div class="formContainer">
+            <h1 style="font-size:300%;">BOOK FLIGHT TICKETS</h1>
+            <p>You can book train tickets here</p>
+            <br>
+
+            <label for="from"><b><br>Depart From</b></label>
+            <select name="from" id="sourceStation"> 
+                <option value="0">Depart From</option>
+                <option value="301">A</option>
+                <option value="302">B</option>
+                <option value="303">C</option>
+                <option value="304">D</option>
+                <option value="305">E</option>
+                <option value="306">F</option>
+                <option value="307">G</option>
+                <option value="308">H</option>
+                <option value="309">I</option>
+                <option value="310">J</option>
+                <option value="311">K</option>
+                <option value="312">L</option>
+                <option value="313">M</option>
+                <option value="314">N</option>
+                <option value="315">O</option>
+                <option value="316">P</option>
+                <option value="317">Q</option>
+                <option value="318">R</option>
+                <option value="319">S</option>
+                <option value="320">T</option>
+                <option value="321">U</option>
+                <option value="322">V</option>
+                <option value="323">W</option>
+                <option value="324">X</option>
+                <option value="325">Y</option>
+            </select>
+            <br>
+            <label for="to"><b><br>Destination Station</b></label>
+            <select name="to" id="sourceStation">
+                <option value="0">Depart From</option>
+                <option value="301">A</option>
+                <option value="302">B</option>
+                <option value="303">C</option>
+                <option value="304">D</option>
+                <option value="305">E</option>
+                <option value="306">F</option>
+                <option value="307">G</option>
+                <option value="308">H</option>
+                <option value="309">I</option>
+                <option value="310">J</option>
+                <option value="311">K</option>
+                <option value="312">L</option>
+                <option value="313">M</option>
+                <option value="314">N</option>
+                <option value="315">O</option>
+                <option value="316">P</option>
+                <option value="317">Q</option>
+                <option value="318">R</option>
+                <option value="319">S</option>
+                <option value="320">T</option>
+                <option value="321">U</option>
+                <option value="322">V</option>
+                <option value="323">W</option>
+                <option value="324">X</option>
+                <option value="325">Y</option>
+            </select>
+            <br>
+            <label for="dateTravel"><b><br>Date Of Travelling</b></label>
+            <input type="date" placeholder="Enter Date" name="dateTravel" required>
+
+            <br>
+            <label for="class"><b><br>Choose Class</b></label>
+            <select name="class" id="class">
+                <option value="0">Select the class</option>
+                <option value="First">First</option>
+                <option value="Business">Business</option>
+                <option value="Economy">Economy</option>
+            </select>
+
+            <div class="clearfix">
+                <!-- <button type="button" class="cancelbtn">Cancel</button> -->
+                <button type="submit" class="signupbtn">Search Flight</button>
+            </div>
+        </div>
+    </form>
+    <br><br>
+  <footer>
+      <p> "Copyright © 2022, Centre For Railway Information Systems, Designed and Hosted by SMS(S) Group 5 "  </p>
+  </footer>
+
+</body>
+</html>
