@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>trains</title>
+    <link rel="stylesheet" href="../static/mainPagestyle.css">
+    <link rel="stylesheet" href="../static/form.css">
+</head>
+<body>
+    <header>
+        <nav id="navbar">
+            <img src="../static/Images/Indian_Railways_logo.png" id="logo">
+            
+            <img src="../static/Images/IRCTC-Logo.png" id="logo2">
+        </nav>
+    </header>
+
+    <form action="/paymentbyType" method="POST" style="border:1px solid #ccc">
+        <div class="formContainer">
+            <h1 style="font-size:300%;">SELECT MODE AND VEHICLE</h1>
+            <!-- <p>You can book train tickets here</p> -->
+            <br>
+
+            <label for="vehicle"><b><br>VEHICLE</b></label>
+            <select name="vehicle" id="vehicle"> 
+                <option value="1">TRAIN</option>
+                <option value="2">BUS</option>
+                <option value="3">FLIGHT</option>
+                
+            </select>
+            <br>
+            <!-- <label for="mode"><b><br>MODE</b></label>
+            <select name="mode" id="mode">
+        cursor.execute()
+        cursor.execute()
+                <option value="0">CASH</option>
+                <option value="1">BANK TRANSFER</option>
+                <option value="2">UPI</option>
+                <option value="3">NET BANKING</option>
+                
+            </select> -->
+            <!-- <br>
+            <label for="dateTravel"><b><br>Date Of Travelling</b></label>
+            <input type="date" placeholder="Enter Date" name="dateTravel" required>
+
+            <br>
+            <label for="class"><b><br>Choose Class</b></label>
+            <select name="class" id="class">
+                <option value="0">Select the class</option>
+                <option value="AC1">AC1</option>
+                <option value="AC2">AC2</option>
+                <option value="AC3">AC3</option>
+                <option value="UNRESERVED">Unreserved</option>
+            </select> -->
+
+            <div class="clearfix">
+                <!-- <button type="button" class="cancelbtn">Cancel</button> -->
+                <button type="submit" class="signupbtn">Login</button>
+            </div>
+        </div>
+    </form>
+    <br><br>
+  <footer>
+      <p> "Copyright © 2022, Centre For Railway Information Systems, Designed and Hosted by SMS(S) Group 5 "  </p>
+  </footer>
+
+</body>
+</html>
