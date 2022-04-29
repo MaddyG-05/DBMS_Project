@@ -1,13 +1,6 @@
 from click import style
 from flask import Flask,render_template, request, redirect
 from flask_mysqldb import MySQL
-from mysql.connector import connect as sql
-from sympy import re
-
-# db = sql(host='localhost',database='endsem_evaluation',user='root',password='abcd')
-# cursor1 = db.cursor()
-
-
 
 app = Flask(__name__)
  
@@ -497,12 +490,24 @@ def successBook():
         query3="""
         select max(ticket_id) from Train_booking"""
         cursor.execute(query3, ())
-        new_train_id=1
         result3=cursor.fetchall()
-        if(result3[0][0] is None):
+        query4="""
+        select max(ticket_id) from Train_cancelled;"""
+        new_train_id=1
+        cursor.execute(query4, ())
+        result4=cursor.fetchall()
+        print(result3)
+        print(result4)
+        if(result3[0][0] is None and result4[0][0] is None):
             new_train_id=1
+        elif(result3[0][0] is None):
+            new_train_id=result4[0][0]+1
+        elif(result4[0][0] is None):
+            new_train_id=result3[0][0]+1
+
         else:
-            new_train_id=result[0][0]+1
+            new_train_id=max(result3[0][0], result4[0][0])+1
+
         mysql.connection.commit()
         query4="""
         insert into Train_booking
@@ -533,10 +538,22 @@ def successBook():
         cursor.execute(query3, ())
         new_bus_id=1
         result3=cursor.fetchall()
-        if(result3[0][0] is None):
+
+        query4="""
+        select max(ticket_id) from Bus_cancelled"""
+        cursor.execute(query4, ())
+        result4=cursor.fetchall()
+
+        print(result3)
+        print(result4)
+        if(result3[0][0] is None and result4[0][0] is None):
             new_bus_id=1
+        elif(result3[0][0] is None):
+            new_bus_id=result4[0][0]+1
+        elif(result4[0][0] is None):
+            new_bus_id=result3[0][0]+1
         else:
-            new_bus_id=result[0][0]+1
+            new_bus_id=max(result3[0][0], result4[0][0])+1
         mysql.connection.commit()
         query4="""
         insert into Bus_booking
@@ -567,10 +584,26 @@ def successBook():
         cursor.execute(query3, ())
         new_flight_id=1
         result3=cursor.fetchall()
-        if(result3[0][0] is None):
+
+
+        query4="""
+        select max(ticket_id) from Flight_cancelled"""
+        cursor.execute(query4, ())
+        result4=cursor.fetchall()
+
+        print(result3)
+        print(result4)
+        if(result3[0][0] is None and result4[0][0] is None):
             new_flight_id=1
+        elif(result3[0][0] is None):
+            new_flight_id=result4[0][0]+1
+
+        elif(result4[0][0] is None):
+            new_flight_id=result3[0][0]+1
+
         else:
-            new_flight_id=result[0][0]+1
+            new_flight_id=max(result3[0][0], result4[0][0])+1
+            
         mysql.connection.commit()
         query4="""
         insert into Flight_booking
@@ -582,6 +615,60 @@ def successBook():
 
     return render_template('successReg.html')
 
+@app.route('/cancellationRedirect', methods=['POST', 'GET'])
+def cancellationRedirect():
+    if(user_id is None):
+        return redirect('/error')
 
+    return render_template('cancellationRedirect.html')
+
+@app.route('/cancellation', methods=['POST', 'GET'])
+def cancellation():
+    if(request.method=='GET'):
+        return redirect('/error')
+
+    if(user_id is None):
+        return redirect('/error')
+    ticket_id=request.form['ticketID']
+    choice=int(request.form['choice'])
+    print(choice)
+    if(choice==1):
+        query="""
+        delete from Train_booking
+        where ticket_id='{}' AND user_id='{}'""".format(ticket_id, user_id)
+
+        cursor=mysql.connection.cursor()
+        cursor.execute(query, ())
+        count=cursor.rowcount
+        mysql.connection.commit()
+        print(count)
+        if(count==0):
+            return "error"
+    if(choice==2):
+        query="""
+        delete from Bus_booking
+        where ticket_id='{}' AND user_id='{}'""".format(ticket_id, user_id)
+
+        cursor=mysql.connection.cursor()
+        cursor.execute(query, ())
+        count=cursor.rowcount
+        mysql.connection.commit()
+        print(count)
+        if(count==0):
+            return "error"
+    if(choice==3):
+        query="""
+        delete from Train_booking
+        where ticket_id='{}' AND user_id='{}'""".format(ticket_id, user_id)
+
+        cursor=mysql.connection.cursor()
+        cursor.execute(query, ())
+        count=cursor.rowcount
+        mysql.connection.commit()
+        print(count)
+        if(count==0):
+            return "error"
+
+    return 'success'
 
 app.run(host='localhost', port=5000,debug=True)
