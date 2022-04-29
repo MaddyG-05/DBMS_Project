@@ -9,6 +9,15 @@
     <link rel="stylesheet" href="../static/form.css">
 </head>
 <body>
+    <header>
+        <nav id="navbar">
+            <img src="../static/Images/Indian_Railways_logo.png" id="logo">
+            <ul>
+                <li><a href="/mainPage">Home</a></li>
+            </ul>
+            <img src="../static/Images/IRCTC-Logo.png" id="logo2">
+        </nav>
+    </header>
     <form action="/cancellation" method="POST" style="border:1px solid #ccc">
         <div class="formContainer">
             <h1 style="font-size:300%;">BOOK TRAIN TICKETS</h1>
@@ -16,13 +25,14 @@
             <br>
 
             <label for="choice"><b><br>Source Station</b></label>
+            
             <select name="choice" id="sourceStation"> 
                 
                 <option value="1">TRAIN</option>
                 <option value="2">BUS</option>
                 <option value="3">FLIGHT</option>
             </select>
-            
+            <br>
             <label for="email"><b><br>User ID</b></label>
             <input type="number" placeholder="Enter Ticket ID" name="ticketID" required>
 

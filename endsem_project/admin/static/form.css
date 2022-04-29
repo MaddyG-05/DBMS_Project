@@ -46,3 +46,9 @@ button:hover {
 .signupbtn:hover{
   color: white;
 }
+
+#textCenter{
+  align-items: center;
+  text-align: center;
+  /* color: #7fffd4; */
+}
