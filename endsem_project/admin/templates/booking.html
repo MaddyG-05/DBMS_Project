@@ -1,14 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>train1</title>
+    <title>Admin Page</title>
     <link rel="stylesheet" href="../static/mainPagestyle.css">
     <link rel="stylesheet" href="../static/form.css">
-    <link rel="stylesheet" href="../static/tableStyle.css">
+
+    
 </head>
+
 <body>
     <header>
         <nav id="navbar">
@@ -17,38 +20,26 @@
                 <!-- <li> <a href="login.html">Login</a></li> -->
                   <!-- NEED TO CHECK HERE IF ALREADY LOGGED IN OR NOT -->
                 <li><a href="/">Home</a></li>
+                
             </ul>
             <img src="../static/Images/IRCTC-Logo.png" id="logo2">
         </nav>
     </header>
-    <br><br><br>
-    <table>
-        <caption><b>TOTAL PAYMENTS</b></caption>
-    <thead>
-        <tr>
-            <th>VEHICLE ID</th>
-            <th>TRAVEL DATE</th>
-            <th>TOTAL SUM</th>
-            <th>PAYMENT TYPE</th>
-            
-        </tr>
-    </thead>
-    <tbody>
-        {% for row in value %}
-        <tr>
-            <td>{{row[0]}}</th>
-            <td>{{row[1]}}</td>
-            <td>{{row[2]}}</td>
-            <td>{{row[3]}}</td>
-        </tr>
-        {% endfor %}
-        
-    </tbody>
-    </table>
-    <br><br>
+    <br>
+    <br>
+    <br>
+    <div id="textCenter">
+        <a href="/booking1"> <b><p style = "text-align: center;font-size:35px;">Total Bookings across Station/Stop/Flight</p></b></a>
+        <br>
+        <a href="/booking2"> <b><p style = "text-align: center;font-size:35px;">Cancel Bookings by Date</p></b></a>
+    </div>
+
+  <br><br>
   <footer>
       <p> "Copyright © 2022, Centre For Railway Information Systems, Designed and Hosted by SMS(S) Group 5 "  </p>
   </footer>
-
+    
 </body>
+
+
 </html>

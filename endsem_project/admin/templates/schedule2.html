@@ -22,9 +22,9 @@
         </nav>
     </header>
 
-    <form action="/paymentbyDate" method="POST" style="border:1px solid #ccc">
+    <form action="/scheduleStation" method="POST" style="border:1px solid #ccc">
         <div class="formContainer">
-            <h1 style="font-size:300%;">SELECT MODE AND VEHICLE</h1>
+            <h1 style="font-size:300%;">SELECT VEHICLE AND SOURCE</h1>
             <!-- <p>You can book train tickets here</p> -->
             <br>
 
@@ -45,8 +45,8 @@
                 
             </select> -->
             <br>
-            <label for="dateTravel"><b><br>Date Of Travelling</b></label>
-            <input type="date" placeholder="Enter Date" name="dateTravel" required>
+            <!-- <label for="dateTravel"><b><br>Date Of Travelling</b></label>
+            <input type="date" placeholder="Enter Date" name="dateTravel" required> -->
 
             <br>
             <!-- <label for="class"><b><br>Choose Class</b></label>
@@ -58,13 +58,14 @@
                 <option value="UNRESERVED">Unreserved</option>
             </select> -->
 
-            <label for="vehicle_id"><b><br>VEHICLE ID</b></label>
-            <input type="number" placeholder="ENTER VEHICLE ID" name="ID" required>
-
+            <label for="stop_id"><b><br>SOURCE ID</b></label>
+            <input type="number" placeholder="ENTER STOP/STATION/AIRPORT ID" name="ID" required>
+            
             <div class="clearfix">
                 <!-- <button type="button" class="cancelbtn">Cancel</button> -->
-                <button type="submit" class="signupbtn">Login</button>
+                <button type="submit" class="signupbtn" onclick="dashboard.html" ><b>PROCEED TO PAY</b></button>
             </div>
+            
         </div>
     </form>
     <br><br>

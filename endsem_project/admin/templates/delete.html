@@ -1,14 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>train1</title>
+    <title>Success Page</title>
     <link rel="stylesheet" href="../static/mainPagestyle.css">
     <link rel="stylesheet" href="../static/form.css">
-    <link rel="stylesheet" href="../static/tableStyle.css">
+    
 </head>
+
 <body>
     <header>
         <nav id="navbar">
@@ -16,39 +17,26 @@
             <ul>
                 <!-- <li> <a href="login.html">Login</a></li> -->
                   <!-- NEED TO CHECK HERE IF ALREADY LOGGED IN OR NOT -->
-                <li><a href="/">Home</a></li>
+                <li><a href="/"></a></li>
+                
             </ul>
             <img src="../static/Images/IRCTC-Logo.png" id="logo2">
         </nav>
     </header>
-    <br><br><br>
-    <table>
-        <caption><b>TOTAL PAYMENTS</b></caption>
-    <thead>
-        <tr>
-            <th>VEHICLE ID</th>
-            <th>TRAVEL DATE</th>
-            <th>TOTAL SUM</th>
-            <th>PAYMENT TYPE</th>
-            
-        </tr>
-    </thead>
-    <tbody>
-        {% for row in value %}
-        <tr>
-            <td>{{row[0]}}</th>
-            <td>{{row[1]}}</td>
-            <td>{{row[2]}}</td>
-            <td>{{row[3]}}</td>
-        </tr>
-        {% endfor %}
-        
-    </tbody>
-    </table>
-    <br><br>
+
+    
+
+    <img src="..\\static\\Images\\correct.jpg" id="error-img">
+    <div class="formContainer" id = "success">
+        <a href="/">Success!! Head to main menu</a>
+    </div>
+
+  <br><br>
   <footer>
       <p> "Copyright © 2022, Centre For Railway Information Systems, Designed and Hosted by SMS(S) Group 5 "  </p>
   </footer>
-
+    
 </body>
+
+
 </html>

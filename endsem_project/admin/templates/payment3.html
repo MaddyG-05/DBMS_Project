@@ -4,10 +4,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>train1</title>
+    <title>trains</title>
     <link rel="stylesheet" href="../static/mainPagestyle.css">
     <link rel="stylesheet" href="../static/form.css">
-    <link rel="stylesheet" href="../static/tableStyle.css">
 </head>
 <body>
     <header>
@@ -17,34 +16,32 @@
                 <!-- <li> <a href="login.html">Login</a></li> -->
                   <!-- NEED TO CHECK HERE IF ALREADY LOGGED IN OR NOT -->
                 <li><a href="/">Home</a></li>
+                
             </ul>
             <img src="../static/Images/IRCTC-Logo.png" id="logo2">
         </nav>
     </header>
-    <br><br><br>
-    <table>
-        <caption><b>TOTAL PAYMENTS</b></caption>
-    <thead>
-        <tr>
-            <th>VEHICLE ID</th>
-            <th>TRAVEL DATE</th>
-            <th>TOTAL SUM</th>
-            <th>PAYMENT TYPE</th>
-            
-        </tr>
-    </thead>
-    <tbody>
-        {% for row in value %}
-        <tr>
-            <td>{{row[0]}}</th>
-            <td>{{row[1]}}</td>
-            <td>{{row[2]}}</td>
-            <td>{{row[3]}}</td>
-        </tr>
-        {% endfor %}
-        
-    </tbody>
-    </table>
+
+    <form action="/paymentCancelled" method="POST" style="border:1px solid #ccc">
+        <div class="formContainer">
+            <h1 style="font-size:300%;">SELECT VEHICLE</h1>
+            <!-- <p>You can book train tickets here</p> -->
+            <br>
+
+            <label for="vehicle"><b><br>VEHICLE</b></label>
+            <select name="vehicle" id="vehicle"> 
+                <option value="1">TRAIN</option>
+                <option value="2">BUS</option>
+                <option value="3">FLIGHT</option>
+                
+            </select>
+            <br>
+            <div class="clearfix">
+                <!-- <button type="button" class="cancelbtn">Cancel</button> -->
+                <button type="submit" class="signupbtn">Login</button>
+            </div>
+        </div>
+    </form>
     <br><br>
   <footer>
       <p> "Copyright © 2022, Centre For Railway Information Systems, Designed and Hosted by SMS(S) Group 5 "  </p>

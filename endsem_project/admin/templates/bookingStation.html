@@ -26,11 +26,12 @@
         <caption><b>TOTAL PAYMENTS</b></caption>
     <thead>
         <tr>
+            <th>TICKET ID</th>
             <th>VEHICLE ID</th>
-            <th>TRAVEL DATE</th>
-            <th>TOTAL SUM</th>
-            <th>PAYMENT TYPE</th>
-            
+            <th>USER ID</th>
+            <th>CLASS</th>
+            <th>PAYMENT ID</th>
+            <th>AMOUNT</th>
         </tr>
     </thead>
     <tbody>
@@ -40,6 +41,8 @@
             <td>{{row[1]}}</td>
             <td>{{row[2]}}</td>
             <td>{{row[3]}}</td>
+            <td>{{row[4]}}</td>
+            <td>{{row[5]}}</td>
         </tr>
         {% endfor %}
         
